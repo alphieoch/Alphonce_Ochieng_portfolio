@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="Contact" content="width=device-width, initial-scale=1">
+    <!--------^tell the user to get the meta data needed^------>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <!-------^link to my css for my website------>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!---^bootstrap links^----->
+<!-----start of main body--->
+</head>
+<body>
+<div class="jumbotron text-center">
+    <div class=title>
+        <h1>Alphonce Ochieng</h1>
+    </div>
+  <p>The portfolio of Alphonce Ochieng </p>
+    <style>
+        /*----add style within the Html due to issue in css----*/
+        img{
+            width: 30%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }</style>
+    <!------start of navigation bar within the header------>
+<!----^ this code above should be coppied on all pages to allow consistancy^---->
+       <div class="navi">
+  <a href=Index.html>Home</a>
+  <a href=repor_t.html>Report</a>
+  <a href=About_me.html>About me</a>
+  <a class="active" href="contact.html">Contact me</a>
+</div>
+</div> 
+<!------End of navigation bar------->
+<!--------start of contact---------->
+    <form>
+  <div class="Contact_form">
+    <label for="Input 1">Please enter your email adress</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Alphie@examplemail.com">
+      <!-------- ^emalil form^ --------------->
+  </div>
+  <div class="Contact_form">
+    <label for="Reason of contact">Reason why you want to contact me</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Dont be shy tell me why :)">
+    </textarea>
+      <!-------- ^Contact form^ --------------->
+  </div>
+        <center><button type="button" class="btn btn-warning">
+            Submit
+        </button></center>
+        <!-------- ^Submit button^--------------->
+</form>
+    
+
+<!-----end of contact -------------->
+</body>
+<div class ="footer">
+    <p>
+    All rights reserved for alphonce Ochieng ID
+    </p>
+    </div>
+<!-----Javascript to play audio files---->
+    <script>
+        var audio = new Audio('background_song.mp3');
+        audio.play();
+    </script>
+</html>

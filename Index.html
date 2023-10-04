@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta name="Homepage" content="width=device-width, initial-scale=1">
+        <!--------^tell the user to get the meta data needed^------>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="index.css">
+        <!-------^link to my css for my website------>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!---^bootstrap links^----->
+        <!-----start of main body--->
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <div class=title>
+                <h1>Alphonce Ochieng</h1>
+            </div>
+            <p>The portfolio of Alphonce Ochieng </p>
+            <style>
+                /*----add style within the Html due to issue in css----*/
+                img{
+                    width: 30%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            </style>
+            <!------start of navigation bar within the header------>
+            <!----^ this code above should be coppied on all pages to allow consistancy^---->
+            <div class="navi">
+                <a class="active" href="Index.html">Home</a>
+                <a href=repor_t.html> Report</a>
+                <a href=About_me.html>About me</a>
+                <a href=contact.html>Contact me</a>
+            </div>
+        </div>
+        <!------End of navigation bar------->
+        <!----^ this code above should be coppied on all pages to allow consistancy including^---->
+        <body>
+            <img src="Images/me.png" alt="picture of me">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <!----used the div class so i dont have to repeat code to perform the same task--->
+                        <div class = "minititle">
+                            <h3>
+                                Welcome to my portfolio
+                            </h3>
+                        </div>
+                        <!----i used the div called bio to add the border and change the font type---->
+                        <div class = "bio">
+                            <div class= "button">
+                                <button type="button">
+                                    Find out more!
+                                </button>
+                            </div>
+                            <p>
+                                This page will contain all of the work i have done for the past 30 year show of my latest projects that i have current in the process.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class = "minititle">
+                            <h3>
+                                About me
+                            </h3>
+                        </div>
+                        <div class = "bio">
+                            <div class= "button">
+                                <!----find button---->
+                                <button type="button">
+                                    find out more!
+                                </button>
+                                 <p>
+                                     Bet you're wondering what i have been up too for the past 30 years click the button bellow to find out more and discover what life is like?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="minititle">
+                            <h3>
+                                My Work 
+                            </h3>  
+                        </div> 
+                        <div class="bio">
+                            <div class= "button">
+                                <button type="button">
+                                    Find out more!
+                                </button>
+                            </div>
+                            <p>
+                                Come see what ive been up too with my projects and see the work ive been up too for the past 30 years.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-----end of main body--->
+        </body>
+        <div class ="footer">
+            <p>
+                All rights reserved for alphonce Ochieng ID
+            </p>
+        </div>
+        <!-----Javascript to play audio files---->
+        <script>
+            var audio = new Audio('background_song.mp3');
+            audio.play();
+        </script>
+</html>
