@@ -1,123 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home</title>
-  <meta charset="utf-8">
-  <meta name="About_me" content="width=device-width, initial-scale=1">
-    <!--------^tell the user to get the meta data needed^------>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>About Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
-    <!-------^link to my css for my website------>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<!---^bootstrap links^----->
-<!-----start of main body--->
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <div class="jumbotron text-center">
-        <div class=title>
-            <h1>Alphonce Ochieng</h1>
-        </div>
-        <p>The portfolio of Alphonce Ochieng </p>
-        <style>
-            /*----add style within the Html due to issue in css----*/
-            img{
-                width: 30%;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        </style>
-        <!------start of navigation bar within the header------>
-        <!----^ this code above should be coppied on all pages to allow consistancy^---->
-        <div class="navi">
-            <a href=Index.html>Home</a>
-            <a href=repor_t.html>Report</a>
-            <a class="active" href="About_me.html">About me</a>
-            <a href=contact.html>Contact me</a>
-        </div>
-    </div> 
-    <!------End of navigation bar------->
-    <!----^ this code above should be coppied on all pages to allow consistancy including^---->
-    <div class = Main_image>
-        <img style="float: left;" src="Images/me.png" alt="picture of me">
-        <!----^moved the image of me to be on the right with extra CSS to position it better^----->
+<body class="fade-out">
+<div class="jumbotron text-center">
+    <h1>Alphonce Ochieng</h1>
+    <p>The portfolio of Alphonce Ochieng</p>
+    <!-- Navigation Bar -->
+    <div class="navi">
+        <a href="Index.html">Home</a>
+        <a href="repor_t.html">Report</a>
+        <a class="active" href="About_me.html">About me</a>
+        <a href="contact.html">Contact me</a>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <h1>Alphonce Ochieng</h1>
-                <h2>Education:</h2>
-                <!-------list of my education with a link to each individual site--->
-                <dl>
-                    <dt>
-                        <a href="https://www.cirencester.ac.uk/cco/course_view.php?course=1442">
-                            Cirencester college
-                        </a>
-                    </dt>
-                    <dd>
-                        - Engineering 
-                    </dd>
-                    <dt>
-                        <a href="https://www.cirencester.ac.uk/cco/course_view.php?course=1442">
-                            Swindon New College
-                        </a>
-                    </dt>
-                    <dd>
-                        - Computer science
-                    </dd>
-                    <dt>
-                        <a href="https://www.cirencester.ac.uk/cco/course_view.php?course=1442">
-                            Goldsmiths University of London
-                        </a>
-                    </dt>
-                    <dd>
-                        - Masters in Computer science  
-                    </dd>
-                </dl>
-                <!------end of list------------>
-                <h1>
-                    hobbies
-                </h1>
-                <div class="grid-container">
-                    <div class="grid-item">
-                        <img src="Images/Concert%20photo.jpg" alt="picture of the octavian concert">
-                    </div>
-                    <div class="grid-item">
-                        <img src="Images/clothing.jpg" alt="picture of my first clothing drop">
-                    </div>
+</div>
+<!-- Main Image -->
+<div class="container">
+    <img src="Images/me.png" alt="Picture of me" class="img-responsive" style="float: left; margin-right: 20px;">
+    <div class="col-sm-8">
+        <h2>Education</h2>
+        <dl>
+            <dt><a href="https://www.cirencester.ac.uk/cco/course_view.php?course=1442">Cirencester College</a></dt>
+            <dd>- Engineering</dd>
+            <dt><a href="https://www.cirencester.ac.uk/cco/course_view.php?course=1442">Swindon New College</a></dt>
+            <dd>- Computer Science</dd>
+            <dt><a href="https://www.gold.ac.uk/">Goldsmiths University of London</a></dt>
+            <dd>- Masters in Computer Science</dd>
+        </dl>
+        <h2>Hobbies</h2>
+        <div class="grid-container">
             <div class="grid-item">
-                <img src="Images/S1MBA%20photoshoot.jpg" alt="picture of the octavian concert">
+                <img src="Images/Concert%20photo.jpg" alt="Picture of the Octavian concert">
+                <p>Photography</p>
             </div>
-            <div class="grid-item">Photography</div>
-            <div class="grid-item">clothing design</div>
-            <div class="grid-item">Directing</div>
-        </div>
-        <!----used the div class so i dont have to repeat code to perform the same task--->
-        <div class = "minititle">
-            <!----i used the div called bio to add the border and change the font type---->
-                </div>
+            <div class="grid-item">
+                <img src="Images/clothing.jpg" alt="Picture of my first clothing drop">
+                <p>Clothing Design</p>
+            </div>
+            <div class="grid-item">
+                <img src="Images/S1MBA%20photoshoot.jpg" alt="Picture of the S1MBA photoshoot">
+                <p>Directing</p>
             </div>
         </div>
-        <div class =info>
-            <H1>
-                <center>
-                    Biography
-                </center>
-            </H1>
-        <p1>
-            Alphie started his obssession of creating back in<b>2009</b> where he was handed his first camera which set him on a trail towards the passion of computing
-            </p1>
-            <p1>Since then He has graduated from <b>Goldsmiths University of london</b> which during his time there he had directed many music videos under his brand <a href="https://www.ochainzs.com"><b>"Ochainzs"</b></a>
-            </p1> and even produced his clothing line while completing a university degree.
-        <p1>These days he currently <b>running a online website selling high value goods</b> and collaborating with well known brands like <b>NIKE, AUDI and KITH</b>.
-            </p1>
+        <div class="bio">
+            <h1>Biography</h1>
+            <p>Alphie started his obsession with creating back in <b>2009</b> when he was handed his first camera, which set him on a path towards a passion for computing.</p>
+            <p>Since then, he has graduated from <b>Goldsmiths University of London</b>, where he directed many music videos under his brand <a href="https://www.ochainzs.com"><b>"Ochainzs"</b></a> and even produced his clothing line while completing his university degree.</p>
+            <p>These days, he is currently running an online website selling high-value goods and collaborating with well-known brands like <b>NIKE, AUDI, and KITH</b>.</p>
         </div>
-        <!-----end of main body--->
-        </body>
-    <div class ="footer">
-        <p>
-            All rights reserved for Alphonce "Ochainzs" Ochieng 2040
-        </p>
     </div>
-    </html>
+</div>
+<!-- Footer -->
+<div class="footer text-center">
+    <p>All rights reserved for Alphonce "Ochainzs" Ochieng 2040</p>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Fade-in effect
+        document.body.classList.remove('fade-out');
+
+        // Add event listener to all links
+        var links = document.querySelectorAll('a');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                var href = link.getAttribute('href');
+                if (href && href[0] !== '#') {
+                    event.preventDefault();
+                    document.body.classList.add('fade-out');
+                    setTimeout(function() {
+                        window.location.href = href;
+                    }, 500);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

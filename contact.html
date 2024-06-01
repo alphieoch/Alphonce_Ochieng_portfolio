@@ -1,72 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home</title>
-  <meta charset="utf-8">
-  <meta name="Contact" content="width=device-width, initial-scale=1">
-    <!--------^tell the user to get the meta data needed^------>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
-    <!-------^link to my css for my website------>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<!---^bootstrap links^----->
-<!-----start of main body--->
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body class="fade-out">
 <div class="jumbotron text-center">
-    <div class=title>
-        <h1>Alphonce Ochieng</h1>
+    <h1>Alphonce Ochieng</h1>
+    <p>The portfolio of Alphonce Ochieng</p>
+    <!-- Navigation Bar -->
+    <div class="navi">
+        <a href="Index.html">Home</a>
+        <a href="repor_t.html">Report</a>
+        <a href="About_me.html">About me</a>
+        <a class="active" href="contact.html">Contact me</a>
     </div>
-  <p>The portfolio of Alphonce Ochieng </p>
-    <style>
-        /*----add style within the Html due to issue in css----*/
-        img{
-            width: 30%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }</style>
-    <!------start of navigation bar within the header------>
-<!----^ this code above should be coppied on all pages to allow consistancy^---->
-       <div class="navi">
-  <a href=Index.html>Home</a>
-  <a href=repor_t.html>Report</a>
-  <a href=About_me.html>About me</a>
-  <a class="active" href="contact.html">Contact me</a>
 </div>
-</div> 
-<!------End of navigation bar------->
-<!--------start of contact---------->
+<!-- Contact Form -->
+<div class="container">
+    <h2>Contact Me</h2>
     <form>
-  <div class="Contact_form">
-    <label for="Input 1">Please enter your email adress</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Alphie@examplemail.com">
-      <!-------- ^emalil form^ --------------->
-  </div>
-  <div class="Contact_form">
-    <label for="Reason of contact">Reason why you want to contact me</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Dont be shy tell me why :)">
-    </textarea>
-      <!-------- ^Contact form^ --------------->
-  </div>
-        <center><button type="button" class="btn btn-warning">
-            Submit
-        </button></center>
-        <!-------- ^Submit button^--------------->
-</form>
-    
-
-<!-----end of contact -------------->
-</body>
-<div class ="footer">
-    <p>
-    All rights reserved for alphonce Ochieng ID
-    </p>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="reason">Reason for Contact</label>
+            <textarea class="form-control" id="reason" rows="4" placeholder="Let me know why you're reaching out"></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning">Submit</button>
+    </form>
+    <!-- Music Controls -->
+    <div class="music-controls text-center">
+        <button id="playPauseButton" class="btn btn-warning" onclick="togglePlayPause()">Pause Music</button>
     </div>
-<!-----Javascript to play audio files---->
-    <script>
-        var audio = new Audio('background_song.mp3');
-        audio.play();
-    </script>
+</div>
+<!-- Footer -->
+<div class="footer text-center">
+    <p>All rights reserved for Alphonce Ochieng</p>
+</div>
+<!-- JavaScript to play/pause audio -->
+<script>
+    var audio = new Audio('background_song.mp3');
+    audio.play();
+    var isPlaying = true;
+
+    function togglePlayPause() {
+        if (isPlaying) {
+            audio.pause();
+            document.getElementById('playPauseButton').innerText = 'Play Music';
+        } else {
+            audio.play();
+            document.getElementById('playPauseButton').innerText = 'Pause Music';
+        }
+        isPlaying = !isPlaying;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Fade-in effect
+        document.body.classList.remove('fade-out');
+
+        // Add event listener to all links
+        var links = document.querySelectorAll('a');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                var href = link.getAttribute('href');
+                if (href && href[0] !== '#') {
+                    event.preventDefault();
+                    document.body.classList.add('fade-out');
+                    setTimeout(function() {
+                        window.location.href = href;
+                    }, 500);
+                }
+            });
+        });
+    });
+</script>
+</body>
 </html>
