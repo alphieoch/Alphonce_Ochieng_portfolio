@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="fade-out">
+<div class="jumbotron text-center">
+    <h1>Alphonce Ochieng</h1>
+    <p>Welcome to my portfolio</p>
+    <!-- Navigation Bar -->
+    <div class="navi">
+        <a class="active" href="Index.html">Home</a>
+        <a href="repor_t.html">Report</a>
+        <a href="About_me.html">About me</a>
+        <a href="contact.html">Contact me</a>
+    </div>
+</div>
+<!-- Main Content -->
+<div class="container">
+    <img src="Images/me.png" alt="Picture of me" class="img-responsive center-block">
+    <div class="row equal-height">
+        <div class="col-sm-4 content-box">
+            <h3>Welcome to my portfolio</h3>
+            <p>This page contains all of the work I have done over the past 30 years, showcasing my latest projects currently in progress.</p>
+            <button type="button" class="btn btn-primary">Find out more!</button>
+        </div>
+        <div class="col-sm-4 content-box">
+            <h3>About me</h3>
+            <p>Curious about what I have been up to for the past 30 years? Click the button below to find out more about my life and experiences.</p>
+            <button type="button" class="btn btn-primary">Find out more!</button>
+        </div>
+        <div class="col-sm-4 content-box">
+            <h3>My Work</h3>
+            <p>Check out my projects and see what I have been working on over the past 30 years.</p>
+            <button type="button" class="btn btn-primary">Find out more!</button>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<div class="footer text-center">
+    <p>All rights reserved for Alphonce Ochieng</p>
+</div>
+<!-- JavaScript to play/pause audio -->
+<div class="music-controls text-center">
+    <button id="playPauseButton" class="btn btn-warning" onclick="togglePlayPause()">Pause Music</button>
+</div>
+<script>
+    var audio = new Audio('background_song.mp3');
+    audio.play();
+    var isPlaying = true;
+
+    function togglePlayPause() {
+        if (isPlaying) {
+            audio.pause();
+            document.getElementById('playPauseButton').innerText = 'Play Music';
+        } else {
+            audio.play();
+            document.getElementById('playPauseButton').innerText = 'Pause Music';
+        }
+        isPlaying = !isPlaying;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Fade-in effect
+        document.body.classList.remove('fade-out');
+
+        // Add event listener to all links
+        var links = document.querySelectorAll('a');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                var href = link.getAttribute('href');
+                if (href && href[0] !== '#') {
+                    event.preventDefault();
+                    document.body.classList.add('fade-out');
+                    setTimeout(function() {
+                        window.location.href = href;
+                    }, 500);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+

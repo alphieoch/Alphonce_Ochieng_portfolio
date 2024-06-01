@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="fade-out">
+<div class="jumbotron text-center">
+    <h1>Alphonce Ochieng</h1>
+    <p>The portfolio of Alphonce Ochieng</p>
+    <!-- Navigation Bar -->
+    <div class="navi">
+        <a href="Index.html">Home</a>
+        <a href="repor_t.html">Report</a>
+        <a class="active" href="About_me.html">About me</a>
+        <a href="contact.html">Contact me</a>
+    </div>
+</div>
+<!-- Main Image -->
+<div class="container">
+    <img src="Images/me.png" alt="Picture of me" class="img-responsive" style="float: left; margin-right: 20px;">
+    <div class="col-sm-8">
+        <h2>Education</h2>
+        <dl>
+            <dt><a href="https://www.cirencester.ac.uk/cco/course_view.php?course=1442">Cirencester College</a></dt>
+            <dd>- Engineering</dd>
+            <dt><a href="https://www.cirencester.ac.uk/cco/course_view.php?course=1442">Swindon New College</a></dt>
+            <dd>- Computer Science</dd>
+            <dt><a href="https://www.gold.ac.uk/">Goldsmiths University of London</a></dt>
+            <dd>- Masters in Computer Science</dd>
+        </dl>
+        <h2>Hobbies</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="Images/Concert%20photo.jpg" alt="Picture of the Octavian concert">
+                <p>Photography</p>
+            </div>
+            <div class="grid-item">
+                <img src="Images/clothing.jpg" alt="Picture of my first clothing drop">
+                <p>Clothing Design</p>
+            </div>
+            <div class="grid-item">
+                <img src="Images/S1MBA%20photoshoot.jpg" alt="Picture of the S1MBA photoshoot">
+                <p>Directing</p>
+            </div>
+        </div>
+        <div class="bio">
+            <h1>Biography</h1>
+            <p>Alphie started his obsession with creating back in <b>2009</b> when he was handed his first camera, which set him on a path towards a passion for computing.</p>
+            <p>Since then, he has graduated from <b>Goldsmiths University of London</b>, where he directed many music videos under his brand <a href="https://www.ochainzs.com"><b>"Ochainzs"</b></a> and even produced his clothing line while completing his university degree.</p>
+            <p>These days, he is currently running an online website selling high-value goods and collaborating with well-known brands like <b>NIKE, AUDI, and KITH</b>.</p>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<div class="footer text-center">
+    <p>All rights reserved for Alphonce "Ochainzs" Ochieng 2040</p>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Fade-in effect
+        document.body.classList.remove('fade-out');
+
+        // Add event listener to all links
+        var links = document.querySelectorAll('a');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                var href = link.getAttribute('href');
+                if (href && href[0] !== '#') {
+                    event.preventDefault();
+                    document.body.classList.add('fade-out');
+                    setTimeout(function() {
+                        window.location.href = href;
+                    }, 500);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

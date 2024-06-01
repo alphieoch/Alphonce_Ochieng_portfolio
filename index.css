@@ -1,0 +1,137 @@
+/*-------------------------Start of background---------------------*/
+body {
+    background: linear-gradient(210deg, #ee7752, #e73c7e, #23a6d5, #FFD700);
+    background-size: 400% 1%;
+    animation: gradient 8s ease infinite;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/*-------------------------end of background---------------------*/
+
+body.fade-out {
+    opacity: 0;
+}
+
+.minititle {
+    font-family: "Times New Roman";
+    text-align: center;
+}
+
+.bio {
+    text-align: center;
+    border: 9px solid black;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.bio:hover {
+    color: aliceblue;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: orange;
+    text-align: center;
+    font-family: serif;
+    padding-top: 10px;
+}
+
+.footer:hover {
+    background-color: orange;
+    color: black;
+}
+
+.button:hover {
+    opacity: 100%;
+    color: black;
+}
+
+.button {
+    padding-bottom: 20px;
+}
+
+.img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.Main_image {
+    padding-left: 30px;
+    padding-bottom: 50px;
+}
+
+.equal-height {
+    display: flex;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
